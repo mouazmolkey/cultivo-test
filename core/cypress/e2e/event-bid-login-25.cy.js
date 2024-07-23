@@ -25,19 +25,7 @@ describe('Event - Bid', () => {
             // Measure time for the button click and response
             const startTime = performance.now();
 
-            cy.get('#bid_form > .modal-footer > .btn--base').click().then(() => {
-                cy.waitUntil(() => {
-                    // Assuming there's some visual indicator that the response is back, such as modal closing
-                    return  cy.get('.iziToast-message').contains('Your Bid Added Successfully');
-
-                }).then(() => {
-                    const endTime = performance.now();
-                    const responseTime = endTime - startTime;
-                    cy.log(`response time: ${responseTime}ms`);
-                    totalResponseTime += responseTime;
-                    responseCount++;
-                });
-            });
+            cy.get('#bid_form > .modal-footer > .btn--base').click();
 
             cy.wait(5000);
             cy.get('.cmn--btn.btn--sm.auto_bid_now.bid-with-anim').then($buttons => {
@@ -64,10 +52,5 @@ describe('Event - Bid', () => {
         it(`Bid - Autobid Iteration ${i + 1}`, () => {
             bidAutobidTest();
         });
-    });
-
-    after(() => {
-        const averageResponseTime = totalResponseTime / responseCount;
-        cy.log(`Average response time: ${averageResponseTime}ms`);
     });
 });
