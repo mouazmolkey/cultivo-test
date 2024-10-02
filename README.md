@@ -1,5 +1,4 @@
 # M Cultivo Auction [WIP]
-
 M Cultivo is a web-based ERP system. This repository contains the back-end code for the M Cultivo ERP 2.0.
 
 ## Table of Contents.
