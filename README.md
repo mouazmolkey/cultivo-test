@@ -10,6 +10,7 @@ M Cultivo is a web-based ERP system. This repository contains the back-end code 
 - [Usage](#usage)
 - [License](#license)
 
+
 ## Getting Started
 
 To set up and run the M Cultivo auction locally, follow the below steps. Before you begin, make sure you have the following prerequisites installed:
